@@ -8,14 +8,17 @@ function Users() {
   const [userData, setUserData] = useState([]);
   const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentpage] = useState(1);
-  const [pagePerShow, setPagePerShow] = useState(2);
+  
+  //  eslint-disable-next-line
+  const [pagePerShow, setPagePerShow] = useState(3);
 
+  //  eslint-disable-next-line
   const URL = 'https://randomuser.me/api/?page=5&results=10&seed=abcde'
 
 
   const fetchUser = () => {
     setLoading(true);
-    axios.get(URL)
+    axios.get('https://randomuser.me/api/?page=5&results=10&seed=abcd')
     .then((response) => {
       setUserData(response.data.results);
     }).catch((error) => {
@@ -31,6 +34,7 @@ function Users() {
     fetchUser();
   }, []);
 
+  //Get current posts
   const lastPostIndex = currentPage * pagePerShow;
 
   const firstPostIndex = lastPostIndex - pagePerShow; 

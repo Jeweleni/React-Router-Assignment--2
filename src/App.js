@@ -10,11 +10,16 @@ import { useState } from 'react';
 import Contact from './Pages/Contact';
 import SidebarLink from './components/SidebarLink';
 
+//  eslint-disable-next-line
+import Pagination from './components/Pagination';
+
 
 import {ErrorBoundary} from './components/ErrorBoundary';
 
 
 function App() {
+
+  //  eslint-disable-next-line
   const [toggleSidebar, setToggleSidebar] = useState(true);
 
   return (
@@ -29,7 +34,7 @@ function App() {
           {toggleSidebar &&  (
             <>
             <div className="logo">
-            <Link exact to='/'><span>J</span>ewelIvy</Link>
+            <Link exact to='/'><span>Jewel</span>Ivy</Link>
           </div>
           <SidebarLink />
           </>

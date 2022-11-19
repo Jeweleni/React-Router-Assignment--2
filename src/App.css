@@ -1,20 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Poppins:wght@200;300;400;500;600;700&display=swap');
 
+
 :root {
-  --bg-black-900: rgb(255, 255, 255);
+  --bg-black-900: rgb(192, 211, 233);
   --bg-black-100: rgb(21, 29, 74);
   --bg-black-50: #fff71d;
   --text-black-900: #ff3a3a;
-  --text-black-700: #ffffff;
+  --text-black-700: #000000;
   --skin-color: #6741ff;
 }
 
 body {
-  margin: 0.5;
+  margin: 0;
   padding: 0;
   line-height: 2.5;
   font-size: 16px;
   font-family: 'Poppins', sans-serif;
+
 }
 
 
@@ -198,7 +200,7 @@ ul {
   left: 300px;
   top: 20px;
   border-radius: 5px;
-  background: var(--bg-black-100);
+  background: #ffff;
   display: none;
   align-items: center;
   justify-content: center;
@@ -226,7 +228,7 @@ ul {
   content: '';
   height: 2px;
   width: 18px;
-  background: var(--skin-color);
+  background: var(--text-black-900);
   position: absolute;
   top: 6px;
   left: 0;
@@ -239,6 +241,7 @@ ul {
 .aside .nav li {
   margin-bottom: 20px;
   display: block;
+  color: #ffff;
 }
 
 .aside .nav li a {
@@ -246,12 +249,12 @@ ul {
   font-weight: 600;
   display: block;
   border-bottom: 1px solid var(--bg-black-50);
-  color: var(--text-black-900);
+  color: #ffff;
   padding: 5px 15px;
 }
 
 .aside .nav li a.active {
-  color: var(--skin-color);
+  color: #ffff;
 }
 
 .aside .nav li a i {
@@ -261,9 +264,11 @@ ul {
 /* Home */
 
 .home {
+  
   min-height: 100vh;
   display: flex;
-  color: var(--text-black-900);
+  color: var(--text-black-700);
+  
 }
 
 .home .home__info {
@@ -274,16 +279,17 @@ ul {
 h3.hello {
   font-size: 28px;
   margin: 15px 0;
+  color: var(--text-black-900);
 }
 
 h3.hello span {
   font-family: 'Clicker Script', cursive;
   font-size: 30px;
   font-weight: 700;
-  color: var(--skin-color);
+  color: var(--text-black-900);
 }
 
-h3.my__profession {
+h3.What_We_Do {
   font-size: 30px;
   margin: 15px 0;
 }
@@ -295,8 +301,9 @@ h3.my__profession {
 .home__info p {
   margin-bottom: 70px;
   font-size: 20px;
-  color: var(--text-black-900);
+  color: var(--text-black-700);
 }
+
 
 .home .home__img {
   flex: 0 0 30%;
@@ -312,7 +319,7 @@ h3.my__profession {
   width: 80px;
  
   left: 20px;
-  top: -40px;
+  top: -30px;
 }
 
 .home__img::after {
@@ -320,15 +327,19 @@ h3.my__profession {
   position: absolute;
   height: 60px;
   width: 300px;
- 
-  right: 20px;
-  bottom: 40px;
+  right: 30px;
+  bottom: 50px;
 }
 
 .home .home__img img {
-  margin: 50%;
-  border-radius: 25px;
+  margin: 100;
+  margin-left: 40;
+  margin-right: 50;
+  margin-bottom: 100;
+  margin-top: 100;
+  border-radius: 15px;
   height: 150px;
+
 }
 
 /* About */
@@ -360,24 +371,6 @@ h3.my__profession {
   color: var(#0000);
 }
 
-.about .about__content .personal__info {
-  flex:  0 0 60%;
-  max-width: 90%;
-  margin-top: 40px;
-}
-
-.about .about__content .personal__info .info__item {
-  flex: 0 0 50%;
-  max-width: 60%;
-} 
-
-.about .about__content .personal__info .info__item p {
-  font-weight: 600;
-  padding: 10px 0;
-  font-size: 16px;
-  color: var(--text-black-900);
-  border-bottom: 1px solid var(--bg-black-50);
-} 
 
 .about .about__content .personal__info .info__item p span {
   font-weight: 400;
@@ -400,69 +393,6 @@ h3.my__profession {
   font-size: 24px;
   margin-bottom: 30px;
   font-weight: 700;
-  color: var(--text-black-900);
-}
-
-.about .about__content .timeline__box {
-  flex: 0 0 100%;
-  max-width: 100%;
-}
-
-.about .about__content .timeline {
-  background: var(--bg-black-100);
-  padding: 30px 15px;
-  border: 1px solid var(--bg-black-50);
-  border-radius: 10px;
-  width: 100%;
-  position: relative;
-}
-
-.about .about__content .timeline .timeline__item {
-  position: relative;
-  padding-left: 37px;
-  padding-bottom: 50px;
-}
-
-.about .about__content .timeline .timeline__item:last-child {
-  padding-bottom: 0;
-}
-
-.about .about__content .timeline .timeline__item::before {
-  content: '';
-  width: 1px;
-  position: absolute;
-  height: 100%;
-  left: 7px;
-  top: 0;
-  background: var(--skin-color);
-}
-
-.about .about__content .timeline .circle__dot {
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 15px;
-  width: 15px;
-  border-radius: 50%;
-  background: var(--skin-color);
-}
-
-.about .about__content .timeline .timeline__date {
-  font-weight: 400;
-  font-size: 14px;
-  margin-bottom: 12px;
-  color: var(--text-black-700);
-}
-
-.about .about__content .timeline .timeline__date .fa {
-  margin-right: 5px;
-}
-
-.about .about__content .timeline .timeline__title {
-  font-weight: 700;
-  font-size: 18px;
-  margin-bottom: 15px;
-  text-transform: capitalize;
   color: var(--text-black-900);
 }
 
@@ -508,7 +438,7 @@ h3.my__profession {
 .user__card p {
   margin-top: 5px;
   font-size: 18px;
-  color: var(--text-black-700);
+  color: #ffff;
   font-weight: 700;
   font-family: 'Clicker Script', cursive;
 }
@@ -630,7 +560,7 @@ input::placeholder, textarea::placeholder {
 }
 
 .question {
-  color: var(--skin-color);
+  color: var(--bg-black-50);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -647,7 +577,7 @@ input::placeholder, textarea::placeholder {
 }
 
 .answer {
-  color: var(white);
+  color: #ffff;
   max-height: 0;
   overflow: hidden;
   transition: all 0.5s cubic-bezier(0,1,0,1);
@@ -657,7 +587,7 @@ input::placeholder, textarea::placeholder {
   border-top: 1px solid var(--skin-color);
   height: auto;
   padding: 10px 20px;
-  color: var(rgb(255, 47, 47));
+  color: #ffff;
   font-size: 14px;
   max-height: 9999px;
   transition: all 0.5s cubic-bezier(0,1,0,1);

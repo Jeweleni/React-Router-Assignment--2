@@ -10,6 +10,7 @@ const Pagination = ({totalPosts, pagePerShow, setCurrentPage, currentPage}) => {
     pages.push(i)
   }
 
+  //  eslint-disable-next-line
   const nextPage = (e) => {
     e.preventDefault();
     
@@ -20,6 +21,7 @@ const Pagination = ({totalPosts, pagePerShow, setCurrentPage, currentPage}) => {
     }
   }
 
+  // eslint-disable-next-line
   const prevPage = (e) => {
     e.preventDefault();
     if(currentPage === 1) {
@@ -31,23 +33,17 @@ const Pagination = ({totalPosts, pagePerShow, setCurrentPage, currentPage}) => {
 
 
   return (
-    <div>
-       {/* <motion.button 
-          whileTap={{ scale: 0.8 }}
-          transition={{ duration: 0.5 }}
-        className='pages__btns' onClick={prevPage}>prev</motion.button>
-      
-      {pages.map((page, index) => {
-        return <motion.button 
-                  whileTap={{ scale: 0.8 }}
-                  transition={{ duration: 0.5 }} className={page === currentPage ? 'active__page' : 'pages__btns'} key={index} onClick={() => setCurrentPage(page)}>{page}</motion.button>
-      })}
-
-       <motion.button 
-          whileTap={{ scale: 0.8 }}
-          transition={{ duration: 0.5 }} className='pages__btns' onClick={nextPage}>next</motion.button>  */}
-          install new drag and drop
-    </div>
+    <nav>
+      <ul className='Pagination'>
+        {pages.map(numer => (
+          <li key={pages} className='page-item'>
+            <a href='Next Page' className='page-link'>
+              {pages}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
     
   )
 }

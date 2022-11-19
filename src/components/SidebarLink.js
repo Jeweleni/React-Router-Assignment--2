@@ -1,10 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom';
-import { sidebarLink } from '../data';
-import Users from '../Pages/Users';
-import About from '../Pages/About';
-import Home from '../Pages/Home';
-import Services from '../Pages/Services';
+import { sidebarLink } from '../data'; 
 
 
 function SidebarLink() {

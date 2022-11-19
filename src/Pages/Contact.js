@@ -20,7 +20,7 @@ function Contact() {
         </div>
 
         <div className='short__input'>
-          <input placeholder='Message' />
+          <input placeholder='Phone Number' />
           <input placeholder='Subject' />
         </div>
 

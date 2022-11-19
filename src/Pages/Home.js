@@ -3,9 +3,11 @@ import Hero from '../components/Hero'
 
 function Home() {
   return (
-    <section className='home section'>
+    <div className='home section'>
       <Hero />
-    </section>
+    </div>
+
+
   )
 }
 
