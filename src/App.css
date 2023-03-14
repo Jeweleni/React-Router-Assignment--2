@@ -2,12 +2,12 @@
 
 
 :root {
-  --bg-black-900: rgb(192, 211, 233);
+  --bg-black-900: rgb(255, 255, 255);
   --bg-black-100: rgb(21, 29, 74);
-  --bg-black-50: #fff71d;
+  --bg-black-50: #89a9b3;
   --text-black-900: #ff3a3a;
   --text-black-700: #000000;
-  --skin-color: #6741ff;
+  --skin-color:rgb(21, 29, 74);
 }
 
 body {

@@ -14,7 +14,7 @@ const Pagination = ({totalPosts, pagePerShow, setCurrentPage, currentPage}) => {
   const nextPage = (e) => {
     e.preventDefault();
     
-    if(currentPage === 5) {
+    if(currentPage === 2) {
       setCurrentPage(1);
     } else {
       setCurrentPage(currentPage + 1);
@@ -25,7 +25,7 @@ const Pagination = ({totalPosts, pagePerShow, setCurrentPage, currentPage}) => {
   const prevPage = (e) => {
     e.preventDefault();
     if(currentPage === 1) {
-      setCurrentPage(5);
+      setCurrentPage(2);
     } else {
       setCurrentPage((prev) => prev - 1);
     }

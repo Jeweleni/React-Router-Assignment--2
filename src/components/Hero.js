@@ -7,8 +7,9 @@ function Hero() {
         <div className="container">
           <div className="row">
             <div className="home__info padd__15">
-              <h3 className="hello">Hello, Welcome to  
-              <span className="name"> Jewel</span>Ivy</h3>
+              <h3 className="hello">Welcome!
+              {/* <span className="name"> JewelIvy</span> */}
+              </h3>
               <h3 className="What_We_Do">We are a <span className="typing">
                   Party Organiser</span></h3>
               <p>We organise funfilled games nights and house parties in Ibadan. A safe and funfilled place where you can unwind from the week-long stress, interact with people and make new friends. </p>
