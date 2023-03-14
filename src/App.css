@@ -623,7 +623,7 @@ input::placeholder, textarea::placeholder {
   margin-top: 70px;
 }
 
-@media (max-width: 1199px) {
+@media (max-width: 600px) {
   .aside {
     left: - 270px;
   }
