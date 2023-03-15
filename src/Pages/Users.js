@@ -9,7 +9,6 @@ function Users() {
   const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentpage] = useState(1);
   
-  //  eslint-disable-next-line
   const [pagePerShow, setPagePerShow] = useState(3);
 
   //  eslint-disable-next-line
@@ -34,7 +33,6 @@ function Users() {
     fetchUser();
   }, []);
 
-  //Get current posts
   const lastPostIndex = currentPage * pagePerShow;
 
   const firstPostIndex = lastPostIndex - pagePerShow; 

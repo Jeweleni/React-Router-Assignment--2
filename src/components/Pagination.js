@@ -1,5 +1,5 @@
 import React from 'react'
-// import {motion} from 'framer-motion';
+
 
 const Pagination = ({totalPosts, pagePerShow, setCurrentPage, currentPage}) => {
   let pages = [];
@@ -10,22 +10,20 @@ const Pagination = ({totalPosts, pagePerShow, setCurrentPage, currentPage}) => {
     pages.push(i)
   }
 
-  //  eslint-disable-next-line
   const nextPage = (e) => {
     e.preventDefault();
     
-    if(currentPage === 2) {
+    if(currentPage === 5) {
       setCurrentPage(1);
     } else {
       setCurrentPage(currentPage + 1);
     }
   }
 
-  // eslint-disable-next-line
   const prevPage = (e) => {
     e.preventDefault();
     if(currentPage === 1) {
-      setCurrentPage(2);
+      setCurrentPage(5);
     } else {
       setCurrentPage((prev) => prev - 1);
     }
@@ -33,19 +31,22 @@ const Pagination = ({totalPosts, pagePerShow, setCurrentPage, currentPage}) => {
 
 
   return (
-    <nav>
-      <ul className='Pagination'>
-        {pages.map(numer => (
-          <li key={pages} className='page-item'>
-            <a href='Next Page' className='page-link'>
-              {pages}
-            </a>
-          </li>
-        ))}
-      </ul>
-    </nav>
+    <div>
+       <button
+        className='pages__btns' onClick={prevPage}>prev</button>
+      
+      {pages.map((page, index) => {
+        return <button
+                className={page === currentPage ? 'active__page' : 'pages__btns'} key={index} onClick={() => setCurrentPage(page)}>{page}</button>
+      })}
+
+       <button
+         className='pages__btns' onClick={nextPage}>next</button>
     
+    </div>
+   
   )
 }
+
 
 export default Pagination

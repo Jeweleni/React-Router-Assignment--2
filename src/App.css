@@ -452,22 +452,26 @@ h3.What_We_Do {
 
 .pagination {
   width: 50%;
-  margin: 15px auto;
   display: flex;
   justify-items: center;
   align-items: center;
+  margin: 15px auto;
   padding-bottom: 30px;
 }
 
 .pagination .pages__btns {
   margin: 0 5px;
   padding: 5px 10px;
+  text-align: center;
   border: 1px solid var(--bg-black-50);
   background: var(--text-black-700);
   color: white;
   border-radius: 40px;
+  display: flex;
+ 
   cursor: pointer;
 }
+ul.pagination {display: flex !important;}
 
 .pagination .active__page {
   margin: 0 5px;
@@ -476,6 +480,7 @@ h3.What_We_Do {
   background: var(--skin-color);
   color: white;
   border-radius: 40px;
+  display: flex !important;
   cursor: pointer;
 }
 
@@ -630,6 +635,95 @@ input::placeholder, textarea::placeholder {
 
   .main__content {
   padding-left: 0;
+}
+.about .about__content .personal__info .info__item p span {
+  display: block;
+  margin-left: 0;
+}
+
+.services .wrapper {
+  width: 50%;
+}
+
+.form {
+  width: 100%;
+}
+
+.about .about__content .education, .about .about__content .experience{
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+}
+
+@media (max-width: 767px) {
+.form, .wrapper, .about .about__content .skills, .about .about__content .personal__info {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+.short__input {
+flex-direction: column;
+}
+
+.short__input input {
+width: 100%;
+}
+input, textarea {
+margin-bottom: 25px;
+}
+
+.aside{
+left: -270px;
+transition: all 0.3s ease;
+}
+
+.sidebar__off {
+  left: 0px;
+}
+
+.aside .close {
+  display: inline-block;
+}
+
+.main__content {
+padding-left: 0;
+}
+
+.about .about__content .personal__info .info__item p span {
+display: block;
+margin-left: 0;
+}
+
+.home .home__img {
+display: none;
+}
+
+.home .home__info {
+flex: 0 0 100%;
+max-width: 100%;
+}
+
+.nav__toggler {
+  display: flex;
+  flex-direction: columns;
+  align-items: center;
+  justify-content: center;
+}
+
+.user__section {
+flex-direction: column;
+}
+
+.user__card {
+width: 100%;
+max-width: 100%;
+margin-top: 20px;
+}
+
+.pagination {
+width: 80%;
+  margin: 15px auto;
 }
 
 }
